@@ -74,10 +74,8 @@ public class Part1 {
         return secondMin;
     }
 
-
     // 3. Даны три точки А(х1,у1), В(х2,у2) и С(х3,у3).
     // Определить, будут ли они расположены на одной прямой.
-    // TODO изменить название функции
     public void checkThreePoints(int x1, int y1, int x2, int y2, int x3, int y3) {
         if (((y3 - y1) / (y2 - y1)) == ((x3 - x1) / (x2 - x1))) {
             System.out.println("Точки принадлежат прямой");
@@ -88,8 +86,7 @@ public class Part1 {
 
     // 4. Заданы размеры А, В прямоугольного отверстия и размеры х, у, z кирпича.
     // Определить, пройдет ли кирпич через отверстие.
-    // TODO изменить название функции
-    public void checkHoleAndStone(int a, int b, int x, int y, int z) {
+    public void checkSizeHoleAndBrick(int a, int b, int x, int y, int z) {
         if ((x < a && y < b) || (x < a && b < z)) {
             System.out.println("Кирпич проходит через отверстие");
         } else {
@@ -98,17 +95,23 @@ public class Part1 {
     }
 
     // 5. Вычислить значение функции
-    // система уравнений F(x) = x^2 - 3 * x + 9, x <= 3
-    //                          1  / (x^3 + 6), x > 3
+    // система уравнений F(x) = x^2 - 3 * x + 9,  если x <= 3; если x > 3
+    //                          1  / (x^3 + 6),
     public static void calculateEquation() {
         int x = 0;
-        while () {
 
-        }
-        (x^2 - 3*x + 9) != 0
-        (x^3 + 6) != 0
+        // TODO x^2 - 3*x + 9
+        // TODO x^3 + 6
     }
 
+    // 6. Найти сумму квадратов первых ста чисел
+    public static void sumOfSquaresFirstHundredNumbers() {
+        int result = 0;
+        for (int i = 0; i < 100; i++) {
+            result += (i * i);
+        }
+        System.out.println("Сумма квадратов первых ста чисел: " + result);
+    }
 
 
     public static void main(String[] args) {
@@ -132,5 +135,9 @@ public class Part1 {
         System.out.println("Задание №2");
         System.out.println(findMaxBetweenTwoMin(1, 2, 3, 4));
         System.out.println(findMaxBetweenTwoMin(9, 8, 7, 6));
+
+        // Задание 6
+        System.out.println("Задание №6");
+        sumOfSquaresFirstHundredNumbers();
     }
 }
